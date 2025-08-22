@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation using Flexbox */
+nav {
+  background: #444;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Grid Layout for Main Content */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Content Section */
+.content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+/* Cards inside content using Flexbox */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  flex: 1;
+  background: #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design (Media Queries) */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack content + sidebar */
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards */
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column; /* Stack nav links */
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    font-size: 0.9rem;
+  }
+}
